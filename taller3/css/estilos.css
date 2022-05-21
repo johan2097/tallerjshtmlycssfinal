@@ -1,0 +1,122 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #8ae44a;
+    font-family: Verdana, sans-serif;   
+    width:1000px;
+    margin: 90px auto;   
+}
+
+
+
+.contenedor{
+    background-color: #e4e4a4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #d6a86f;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px 60px;
+}
+
+.header{
+    background-color: #e2f10e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #d6a86f;
+    padding: 10px 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1{
+   color: #aa5c67;
+   text-align: center;
+}
+
+.button{
+    cursor: pointer;
+    background-color: #e2f10e;
+    border: 2px solid #e2f10e;
+    border-radius: 4px;
+    color: #0c0c0c;
+    font-size: 16px;
+    height: 50px;
+    text-decoration: none; 
+    text-align: center;
+}
+
+
+.accordion-item input{
+    display: none;
+}
+
+.acordeon-titulo{
+    display: block;
+    padding: 15px;
+    background: #e2f605;
+    color: rgb(16, 15, 15);
+    cursor: pointer;
+    border-bottom: 2px solid #d9c97d;
+}
+
+.acordeon-titulo:hover{
+    background-color: #f1de0e;        
+}
+
+.acordeon-contenido{
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.accordion-item input:checked ~ .acordeon-contenido{
+    height: auto;
+    margin: 10px 0;
+    
+}
+
+.accordion-item input:checked ~ pre{
+  padding: 10px;  
+  background-color: #fffbf4;
+  border-radius: 4px;
+  
+}
+
+.botonCopiar{
+    cursor: pointer;
+    background-color: #fffbf4;
+    border: 2px solid #813845;
+    border-radius: 4px;
+    color: black;
+    font-size: 15px;
+    float: right;
+        
+}
+
+.botonCopiar:hover,.botonDescargar:hover{
+    cursor: pointer;
+    background-color: #e2e2e2;
+    border: 2px solid #d9c97d;
+    border-radius: 4px;
+    color: black;
+    
+    
+}
+
+.botonDescargar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #dc8f89;
+    border: 2px solid #813845;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    text-decoration: none; 
+    text-align: center;
+}

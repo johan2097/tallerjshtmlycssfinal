@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taller 2 de java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
+        <script src="../js/newjavascript3.js"></script>
+        
+    </head>
+    <body onload = "main()">
+        <header class="header" >
+            <h1>Taller 2 de java</h1> 
+        </header>
+        
+       <article>
+           <br>
+           <section>
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item2">
+               <label for="item2" class="acordeon-titulo">Punto 1</label>
+               <p class="acordeon-contenido">
+                  1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.              
+               
+               </p>
+               
+               <pre class="acordeon-contenido"> 
+
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+						
+							public static void main(String[] args) {
+								int edad;
+						
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Digite por favor la edad:");
+								edad = scanner.nextInt();
+								
+								
+								if( edad >= 18) {
+								System.out.println("Usted es mayor de edad:");
+								}
+						
+								}
+						
+							}
+						}
+					</code>
+                 </pre>		
+            </div>
+           
+           <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item3">
+               <label for="item3" class="acordeon-titulo">Punto 2</label>
+               <p class="acordeon-contenido">
+                  2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).        
+                </p>
+               
+               <pre class="acordeon-contenido"> 
+
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							  public static void main(String[] args) {
+								int edad;
+						
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Digite su edad:");
+								edad = scanner.nextInt();
+								
+								
+								if( edad < 18) {
+								System.out.println("Usted aun es un niño.");
+								}
+								else{
+								System.out.println("Usted es un adulto.");
+								}
+							}     
+						
+							}
+							
+						}
+                   </code>
+                 </pre>		
+            </div>
+           
+           <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item4">
+               <label for="item4" class="acordeon-titulo">Punto 3</label>
+               <p class="acordeon-contenido">
+                   3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la
+				   persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla
+				   [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si laedad de la persona es menor que
+				   18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede
+				   entrar a la fiesta, por favor devuélvase a su casa.          
+                </p>
+               
+               <pre class="acordeon-contenido"> 
+
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+
+						public class App {
+							  public static void main(String[] args) {
+								  String nombre, apellidos;
+								  int edad;
+						
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Por favor escriba su nombre");
+								nombre = scanner.nextLine();
+								System.out.println("Por favor escriba sus apellidos");
+								apellidos = scanner.nextLine();
+								System.out.println("Digite la edad");
+								edad = scanner.nextInt();
+								
+								}
+								
+								if( edad >= 18) {
+								System.out.println(nombre +" " + apellidos + " usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+								}
+								else{
+								System.out.println(nombre +" " + apellidos + " usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuelvase a su casa");
+								}
+							}
+						}
+                   </code>
+                 </pre>		
+            </div>
+           
+           <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item5">
+               <label for="item5" class="acordeon-titulo">Punto 4</label>
+               <p class="acordeon-contenido">
+                   4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el
+				   Porvenir, requiere de una aplicación que permita registrar el alquiler de las
+				   películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar
+				   película, consultar películas disponibles y recibir película en la video tienda con la opción de
+				   realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.      
+                </p>
+               
+               <pre class="acordeon-contenido"> 
+
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							
+							public static void main(String[] args) {
+								  String nombrepelicula, pelicula1= "Titanic",pelicula2="Spiderman",pelicula3= "Rio",novedadpelicula;
+								  int opcion;
+						
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Tienda de pelis, por favor elija una de las opciones");
+								System.out.println("1. Alquilar la pelicula");
+								System.out.println("2. Consultar las peliculas disponibles");
+								System.out.println("3. Recibir las pelicula");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Como se llama la pelicula?");
+										 nombrepelicula = scanner.nextLine();
+										 break;
+									 case 2:
+										 System.out.println("Las peliculas disponibles son las siguientes:");
+										 System.out.println(pelicula1);
+										 System.out.println(pelicula2);
+										 System.out.println(pelicula3);
+										 break;
+									 case 3:
+										 System.out.println("Por favor ingrese  las novedades de la pelicula");
+										 novedadpelicula = scanner.nextLine();
+										 break;     
+								   
+								}
+							}
+								
+							   
+							}
+							
+						}
+                    </code>
+                 </pre>		
+            </div>
+               
+           <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item6">
+               <label for="item6" class="acordeon-titulo">Punto 5</label>
+               <p class="acordeon-contenido">               
+                   5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los
+				   productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a 
+				   comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.
+ 
+               <pre class="acordeon-contenido">
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							 public static void main(String[] args) {
+							String producto, tipoproducto ,motivodevolucion ,devolucion ;
+							int cantidadproducto, precioproducto ;
+							int opcion;
+							String producto1 = "Compuatores" ;
+							String producto2 = "Televisores";
+							String producto3 = "Tabletas";
+							int precioproducto1 = 4500000;
+							int precioproducto2 = 2000000;
+							int precioproducto3 = 800000;
+						
+						
+							   try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Drogueria Mi Cartago por favor elija una opcion");
+								System.out.println("1. Compra Producto");
+								System.out.println("2. Consultar de precios producto");
+								System.out.println("3. Devolucion producto");
+								System.out.println("4. Salir de la app");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Nombre del producto?");
+										 producto = scanner.nextLine();
+										 System.out.println("Tipo de producto?");
+										 tipoproducto = scanner.nextLine();
+										 System.out.println("Cantidad de producto?");
+										 cantidadproducto  = scanner.nextInt();
+										 System.out.println("Precio del producto?");
+										 precioproducto = scanner.nextInt();
+										 break;
+									 case 2:
+										 System.out.println("Las productos disponibles con sus precios son");
+										 System.out.println(producto1 + " Precio " + precioproducto1);
+										 System.out.println(producto2 + " Precio " + precioproducto2);
+										 System.out.println(producto3 + " Precio " + precioproducto3);
+										 break;
+									 case 3:
+										 System.out.println("Por favor ingrese  el producto a devolver");
+										 devolucion = scanner.nextLine();
+										 System.out.println("Por favor ingrese  el motivo de la devolucio");
+										 motivodevolucion = scanner.nextLine();
+										 break;     
+									 case 4:
+										   break;      
+								}
+								
+							}
+							}
+							
+						}
+                   </code>
+                 </pre>
+            </div>
+               
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item7">
+               <label for="item7" class="acordeon-titulo">Punto 6</label>
+               <p class="acordeon-contenido">               
+                   6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios 
+				   generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller 
+				   con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+ 
+               <pre class="acordeon-contenido"> 
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="6">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							 public static void main(String[] args) {
+								String fecha,moto,cliente,nombrecliente,fechas,nmoto,arreglomoto ;
+								int opcion;
+							
+						
+							   try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Taller de Motos El Maquinista, por favor elija una opcion");
+								System.out.println("1. Ingreso de Motos");
+								System.out.println("2. Salida de Motos");
+								System.out.println("3. Salir");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Fecha de ingreso?");
+										 fecha = scanner.nextLine();
+										 System.out.println("Referencia de la moto?");
+										 moto = scanner.nextLine();
+										 System.out.println("Observaciones del cliente?");
+										 cliente = scanner.nextLine();
+										 System.out.println("Nombre del cliente?");
+										 nombrecliente = scanner.nextLine();
+										 break;
+									 case 2:
+										 System.out.println("Fecha de salida?");
+										 fechas = scanner.nextLine();
+										 System.out.println("Novedades de la moto?");
+										 moto = scanner.nextLine();
+										 System.out.println("Arreglos realizados a la moto?");
+										 arreglomoto = scanner.nextLine();
+										 break;
+									 case 3:
+										 break;      
+								}
+								
+							}
+							
+							}
+							
+						}
+                   </code>
+                 </pre>
+            </div>
+               
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item8">
+               <label for="item8" class="acordeon-titulo">Punto 7</label>
+               <p class="acordeon-contenido">               
+                   7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros 
+				   Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).
+ 
+               <pre class="acordeon-contenido"> 
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="7">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							  public static void main(String[] args) {
+								String nombre, apellido;
+								float peso,estatura,imc;
+							
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Por favor ingrese su nomnbre");
+								nombre = scanner.nextLine();
+								System.out.println("Por favor ingrese su apellido");
+								apellido = scanner.nextLine();
+								System.out.println("Por favor ingrese su peso en kilos");
+								peso = scanner.nextFloat();
+								System.out.println("Por favor ingrese su estatura en metros");
+								estatura = scanner.nextFloat();
+								
+								imc = peso /(estatura*estatura);
+								  System.out.println(imc);
+								if(imc <= 18.5){
+								System.out.println("Usted se encuentra en bajo peso");
+								}
+								else if(imc >= 18.5 & imc <= 24.9) {
+									System.out.println("Usted se encuentra en el peso normal");
+									}
+								 else if(imc >= 25 & imc <= 29.9) {
+									System.out.println("Usted se encuentra en sobrepeso");
+									}
+								 else if(imc >= 30) {
+									System.out.println("Usted se encuentra en obesidad");
+									}
+							}
+						  }
+						}
+                   </code>
+                 </pre>
+            </div>   
+               
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item9">
+               <label for="item9" class="acordeon-titulo">Punto 8</label>
+               <p class="acordeon-contenido">               
+                   8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta 
+				   tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles
+				   y las ventas que se registren diariamente.
+ 
+               <pre class="acordeon-contenido"> 
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="8">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+
+						public class App {
+							public static void main(String[] args) {
+							String sabor,decoracion,pproducto,venta;
+							int porciones,precio,opcion;
+							String torta1 = "Torta de 1 libra";
+							String torta2 = "Torta de 2 libras";
+							String torta3 = "Torta de 3 libras"; ;
+							int preciotorta1 = 50000;
+							int preciotorta2 = 100000;
+							int preciotorta3 = 150000;
+							
+							 try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Pastelero Don Cartago, por favor elija una opcion");
+								System.out.println("1. Registrar pedidos");
+								System.out.println("2. Disponibilidad de tortas");
+								System.out.println("3. Registro de ventas diarias");
+								System.out.println("4. Salir de la app");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Sabor de la torta:");
+										 sabor = scanner.nextLine();
+										 System.out.println("Cantidad de porciones de torta:");
+										 porciones = scanner.nextInt();
+										 System.out.println("Observaciones del cliente:");
+										 decoracion = scanner.nextLine();
+										 break;
+									 case 2:
+										 System.out.println("Las tortas disponibles con sus precios son: ");
+										 System.out.println( torta1 + " Precio " + preciotorta1);
+										 System.out.println( torta2 + " Precio " + preciotorta2);
+										 System.out.println( torta3 + " Precio " + preciotorta3);
+										 break;
+									 case 3:
+										 System.out.println("Por favor ingrese la torta vendida");
+										 venta = scanner.nextLine();
+										 System.out.println("Por favor ingrese el valor de la torta");
+										 precio = scanner.nextInt();
+										 break;     
+									 case 4:    
+										 break;     
+								}
+								
+							   
+							 }
+						
+							}
+						}
+                   </code>
+                 </pre>
+            </div>
+               
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item10">
+               <label for="item10" class="acordeon-titulo">Punto 9</label>
+               <p class="acordeon-contenido">               
+                   9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+				   facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No 
+				   olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+               <pre class="acordeon-contenido"> 
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="9">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+						public class App {
+							public static void main(String[] args) {
+							int largor, anchor,rec,baset, alturat,opcion, baseme,basema,alturatr;
+							float trap,tria;
+						
+								
+							 try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Calculo del area de figuras geometricas, por favor elija una opcion");
+								System.out.println("1. Rectangulo");
+								System.out.println("2. Triangulo");
+								System.out.println("3. Trapecio");
+								System.out.println("4. Salir");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Largo del rectangulo?");
+										 largor = scanner.nextInt();
+										 System.out.println("Ancho del rectangulo?");
+										 anchor = scanner.nextInt();
+										 rec = largor*anchor;
+										 System.out.println("El area del rectangulo es " + rec);
+										 
+										 break;
+									 case 2:
+										 System.out.println("Base del triangulo?");
+										 baset = scanner.nextInt();
+										 System.out.println( "Altura del triangulo ?");
+										 alturat = scanner.nextInt();
+										 tria = (baset*alturat)/2;
+										 System.out.println( "El area del triangulo es " + tria);
+										 break;
+									 case 3:
+										 System.out.println("Base menor del trapesio?");
+										 baseme = scanner.nextInt();
+										 System.out.println("Base mayor del trapesio ?");
+										 basema = scanner.nextInt();
+										 System.out.println("Altura del trapesio ?");
+										 alturatr = scanner.nextInt();
+										 trap = ((basema+baseme)/2*alturatr);
+										 System.out.println("El area del trapesio es " + trap);
+										 break;     
+									 case 4:    
+										 break;     
+								}
+								
+							} 
+							}
+							
+						}
+                   </code>
+                 </pre>
+            </div>
+               
+            <div class="accordion-item">
+               <input type="checkbox" name="acordeon" id="item11">
+               <label for="item11" class="acordeon-titulo">Punto 10</label>
+               <p class="acordeon-contenido">               
+                   10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la 
+				   cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar 
+				   valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.
+               </p>
+ 
+               <pre class="acordeon-contenido"> 
+                    <button class="botonCopiar" onclick="Ejecutar(this)" id="10">Copiar codigo</button>
+                    <code class="code">
+						import java.util.Scanner;
+
+
+						public class App {
+							public static void main(String[] args) {
+							String titular;
+							int cantidad,ingreso,retiro, opcion;
+							
+						
+								try (Scanner scanner = new Scanner(System.in)) {
+								System.out.println("Nombre del titular");
+								titular = scanner.nextLine();
+								System.out.println("Escribir cantidad");
+								cantidad = scanner.nextInt();
+								System.out.println("Su banco fiel, por favor elija una opcion:");
+								System.out.println("1. Desea realizar ingresos:");
+								System.out.println("2. Desea realizar retiros:");
+								System.out.println("3. Desea realizar consultas de valor:");
+								System.out.println("4. Salir de la app ");
+								opcion = scanner.nextInt();
+								
+								switch (opcion) {
+									case 1:
+										 System.out.println("Valor del ingreso:");
+										 ingreso = scanner.nextInt();
+										 if(ingreso < 0){
+											 System.out.println("El valor que usted ha introducido es negativo");
+										 }
+										 break;
+									 case 2:
+										 System.out.println("Valor del retiro");
+										 retiro = scanner.nextInt();
+										 if(retiro > cantidad){
+											 System.out.println("El valorque usted ha introducido es mayor al que tiene en la cuenta");
+										 }
+										 break;
+									 case 3:
+										 System.out.println("Su saldo es " + cantidad);
+										 break;     
+									 case 4:    
+										  System.out.println("Adios");
+										 break;     
+								}
+								
+							 }
+							 
+                   </code>
+                 </pre>
+            </div>   
+               
+        </section>
+        <br>
+          
+       </article>
+        
+        <footer>
+            <p>  
+        Para descargar los talleres
+            </p> 
+        <a class="botonDescargar" href="../descargas/taller2" target="_blank">Descargar todo</a>      
+        </footer> 
+    </body>
+</html>
